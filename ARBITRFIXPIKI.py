@@ -1395,7 +1395,7 @@ class ChannelGate(BaseMiddleware):
 async def send_join_prompt(event):
     clean = REQUIRED_CHANNEL_ID.replace("@", "")
     kb = kb_of([
-        [InlineKeyboardButton(text="📢 Подписаться на канал", url=https://t.me/{clean})],
+        [InlineKeyboardButton(text="📢 Подписаться на канал", url=f"https://t.me/{clean}")],
         [btn("✅ Проверить подписку", "check_sub")],
     ])
     text = "<b>Приветствуем!</b>\n\nДля доступа к сканеру подпишитесь на наш канал."
